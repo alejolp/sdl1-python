@@ -1,0 +1,20 @@
+SDL 1 Python Bindings using SWIG
+--------------------------------
+
+Run the "buildall.sh" script to build the module.
+
+This is a simple wrapper to use SDL from Python. It is an extension module
+creates with SWIG.
+
+LICENCE
+-------
+
+See LICENCE file for specifics on this library.
+
+SDL - Simple DirectMedia Layer is Copyright (C) Sam Lantinga.
+
+Author
+------
+
+Alejandro Santos, @alejolp on Github, Twitter.
+
