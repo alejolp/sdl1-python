@@ -26,12 +26,16 @@ enum SDL_bool {
 
           %include "stdint.h" won't work. */
 
+/*
 typedef char int8_t;
 typedef unsigned char uint8_t;
 typedef short int16_t;
 typedef unsigned short uint16_t;
 typedef int int32_t;
 typedef unsigned uint32_t;
+*/
+
+%include "stdint.i"
 
 typedef int8_t Sint8;
 typedef uint8_t Uint8;
@@ -383,9 +387,175 @@ char *  SDL_GetKeyName(SDLKey key);
 
 /* Mouse */
 
-/*
-%include "SDL_mouse.h"
-*/
+typedef struct SDL_Cursor {
+    SDL_Rect area;          /**< The area of the mouse cursor */
+    Sint16 hot_x, hot_y;        /**< The "tip" of the cursor */
+    Uint8 *data;            /**< B/W cursor data */
+    Uint8 *mask;            /**< B/W cursor mask */
+    Uint8 *save[2];         /**< Place to save cursor area */
+    WMcursor *wm_cursor;        /**< Window-manager cursor */
+} SDL_Cursor;
 
 Uint8 SDL_GetMouseState(int *OUTPUT, int *OUTPUT);
+
+Uint8 SDL_GetRelativeMouseState(int *OUTPUT, int *OUTPUT);
+
+void  SDL_WarpMouse(Uint16 x, Uint16 y);
+
+SDL_Cursor* SDL_CreateCursor(Uint8 *data, Uint8 *mask, int w, int h, int hot_x, int hot_y);
+
+void SDL_SetCursor(SDL_Cursor *cursor);
+
+SDL_Cursor* SDL_GetCursor(void);
+
+void SDL_FreeCursor(SDL_Cursor *cursor);
+
+int SDLCALL SDL_ShowCursor(int toggle);
+
+#define SDL_BUTTON_LEFT     1
+#define SDL_BUTTON_MIDDLE   2
+#define SDL_BUTTON_RIGHT    3
+#define SDL_BUTTON_WHEELUP  4
+#define SDL_BUTTON_WHEELDOWN    5
+#define SDL_BUTTON_X1       6
+#define SDL_BUTTON_X2       7
+
+%rename(SDL_BUTTON) sdl1py_SDL_BUTTON;
+%inline %{
+    int sdl1py_SDL_BUTTON(int x) { return SDL_BUTTON(x); }
+%}
+
+%constant int SDL_BUTTON_LMASK = SDL_BUTTON_LMASK;
+%constant int SDL_BUTTON_MMASK = SDL_BUTTON_MMASK;
+%constant int SDL_BUTTON_RMASK = SDL_BUTTON_RMASK;
+%constant int SDL_BUTTON_X1MASK = SDL_BUTTON_X1MASK;
+%constant int SDL_BUTTON_X2MASK = SDL_BUTTON_X2MASK;
+
+/* Joystick */
+
+int SDL_JoystickGetBall(SDL_Joystick *joystick, int ball, int *OUTPUT, int *OUTPUT);
+
+%ignore SDL_JoystickGetBall;
+%include "SDL_joystick.h"
+
+/* Platform */
+
+/* 
+Generated code from "SDL_platform.h" 
+$ grep "define " SDL_platform.h  | cut -d" " -f2 | cut -f1
+*/
+
+%inline %{
+    const char* SDL_GetPlatformName(void) {
+
+#if defined(__BEOS__)
+return "__BEOS__";
+#endif
+
+#if defined(__MACOS__)
+return "__MACOS__";
+#endif
+
+#if defined(__OS2__)
+return "__OS2__";
+#endif
+
+#if defined(__SOLARIS__)
+return "__SOLARIS__";
+#endif
+
+#if defined(__HAIKU__)
+return "__HAIKU__";
+#endif
+
+#if defined(__OPENBSD__)
+return "__OPENBSD__";
+#endif
+
+#if defined(__AIX__)
+return "__AIX__";
+#endif
+
+#if defined(__WIN32__)
+return "__WIN32__";
+#endif
+
+#if defined(__DREAMCAST__)
+return "__DREAMCAST__";
+#endif
+
+#if defined(__IRIX__)
+return "__IRIX__";
+#endif
+
+#if defined(__LINUX__)
+return "__LINUX__";
+#endif
+
+#if defined(__RISCOS__)
+return "__RISCOS__";
+#endif
+
+#if defined(__NETBSD__)
+return "__NETBSD__";
+#endif
+
+#if defined(__OSF__)
+return "__OSF__";
+#endif
+
+#if defined(__FREEBSD__)
+return "__FREEBSD__";
+#endif
+
+#if defined(__HPUX__)
+return "__HPUX__";
+#endif
+
+#if defined(__BSDI__)
+return "__BSDI__";
+#endif
+
+#if defined(__QNXNTO__)
+return "__QNXNTO__";
+#endif
+
+#if defined(__MACOSX__)
+return "__MACOSX__";
+#endif
+
+    return "";
+    }
+%}
+
+/* Video */
+
+%include "SDL_video.h"
+
+%rename(SDL_MUSTLOCK) sdl1py_SDL_MUSTLOCK;
+%inline %{
+    int sdl1py_SDL_MUSTLOCK(SDL_Surface* s) { return SDL_MUSTLOCK(s); }
+%}
+
+%rename(SDL_LoadBMP) sdl1py_SDL_LoadBMP;
+%inline %{
+    SDL_Surface* sdl1py_SDL_LoadBMP(const char* fname) { 
+        return SDL_LoadBMP(fname);
+    }
+%}
+
+/* SDL_BlitSurface is a #defined macro. */
+#undef SDL_BlitSurface
+
+%rename(SDL_BlitSurface) sdl1py_SDL_BlitSurface;
+%inline %{
+    int sdl1py_SDL_BlitSurface(SDL_Surface* aaa, SDL_Rect* bbb, SDL_Surface* ccc, SDL_Rect* ddd) {
+        return SDL_BlitSurface(aaa, bbb, ccc, ddd);
+    }
+%}
+
+/* Timer */
+
+%include "SDL_timer.h"
+
 
