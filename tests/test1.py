@@ -6,7 +6,9 @@ import os, sys
 try:
     import sdl1py
 except ImportError:
-    sys.path.append('../build/lib.linux-x86_64-2.7')
+    INCPATH = '../build'
+    for y in [x for x in os.listdir(INCPATH) if x.startswith('lib.')]:
+        sys.path.append(os.path.join(INCPATH, y))
     import sdl1py
 
 def main():
@@ -17,7 +19,13 @@ def main():
     run = True
     ev = sdl1py.SDL_Event()
     bgcolor = sdl1py.SDL_MapRGB(screen.format, 0, 0, 64)
-    img = sdl1py.SDL_LoadBMP("pic1.bmp")
+
+    #img = sdl1py.SDL_LoadBMP("pic1.bmp")
+    img2 = sdl1py.IMG_Load("pic1.png")
+    img = sdl1py.SDL_DisplayFormat(img2)
+    assert img != None
+    sdl1py.SDL_FreeSurface(img2)
+
     imgpos = sdl1py.SDL_Rect()
     imgpos.w = img.w
     imgpos.h = img.h

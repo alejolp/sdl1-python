@@ -8,7 +8,7 @@
 cd $(dirname $0)
 
 SDL_CFLAGS=$(sdl-config --cflags)
-SDL_LDFLAGS=$(sdl-config --libs)
+SDL_LDFLAGS="$(sdl-config --libs) $(pkg-config --libs SDL_image)"
 
 swig -python $SDL_CFLAGS -I/usr/include sdl1py.i
 

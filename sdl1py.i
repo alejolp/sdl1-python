@@ -1,8 +1,13 @@
 %module sdl1py
 
+/*
+  FIXME: This file is a mess. Inconsistent and such.
+*/
+
 %{
 #define SWIG_FILE_WITH_INIT
 #include "SDL.h"
+#include "SDL_image.h"
 #include "sdl1py.h"
 %}
 
@@ -20,20 +25,6 @@ enum SDL_bool {
     SDL_FALSE = 0,
     SDL_TRUE  = 1
 };
-
-/* FIXME: This is wrong. I should not be hard-coding the data types like this, 
-          but don't know how to tell SWIG wich data type the compiler picked.
-
-          %include "stdint.h" won't work. */
-
-/*
-typedef char int8_t;
-typedef unsigned char uint8_t;
-typedef short int16_t;
-typedef unsigned short uint16_t;
-typedef int int32_t;
-typedef unsigned uint32_t;
-*/
 
 %include "stdint.i"
 
@@ -557,5 +548,15 @@ return "__MACOSX__";
 /* Timer */
 
 %include "SDL_timer.h"
+
+/* SDL_Image */
+
+%include "SDL_image.h"
+
+/* Custom Functions */
+
+%rename(SDL_GetPixel) sdl1py_SDL_GetPixel;
+%rename(SDL_PutPixel) sdl1py_SDL_PutPixel;
+%include "sdl1py.h"
 
 
