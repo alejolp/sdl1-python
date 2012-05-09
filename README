@@ -6,10 +6,10 @@ Run the "buildall.sh" script to build the module.
 This is a simple wrapper to use SDL from Python. It is an extension module
 creates with SWIG.
 
-LICENCE
+LICENSE
 -------
 
-See LICENCE file for specifics on this library.
+See LICENSE file for specifics on this library.
 
 SDL - Simple DirectMedia Layer is Copyright (C) Sam Lantinga.
 
