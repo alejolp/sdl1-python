@@ -3,7 +3,7 @@
 from distutils.core import setup, Extension
 
 sdl1py_module = Extension('_sdl1py',
-                           sources=['sdl1py.c', 'sdl1py_wrap.c'],
+                           sources=['src/sdl1py.c', 'src/sdl1py_wrap.c'],
                            )
 
 setup (name = 'sdl1py',
@@ -12,5 +12,6 @@ setup (name = 'sdl1py',
        description = """SDL1 Python Bindings""",
        ext_modules = [sdl1py_module],
        py_modules = ["sdl1py"],
+       package_dir = {'': 'src'},
        )
 
