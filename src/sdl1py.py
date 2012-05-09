@@ -76,35 +76,35 @@ SDL_INIT_HAPTIC = _sdl1py.SDL_INIT_HAPTIC
 SDL_INIT_NOPARACHUTE = _sdl1py.SDL_INIT_NOPARACHUTE
 SDL_INIT_EVERYTHING = _sdl1py.SDL_INIT_EVERYTHING
 
-def SDL_Init(*args):
+def SDL_Init(*args) -> "Uint32" :
   return _sdl1py.SDL_Init(*args)
 SDL_Init = _sdl1py.SDL_Init
 
-def SDL_InitSubSystem(*args):
+def SDL_InitSubSystem(*args) -> "int" :
   return _sdl1py.SDL_InitSubSystem(*args)
 SDL_InitSubSystem = _sdl1py.SDL_InitSubSystem
 
-def SDL_QuitSubSystem(*args):
+def SDL_QuitSubSystem(*args) -> "void" :
   return _sdl1py.SDL_QuitSubSystem(*args)
 SDL_QuitSubSystem = _sdl1py.SDL_QuitSubSystem
 
-def SDL_WasInit(*args):
+def SDL_WasInit(*args) -> "int" :
   return _sdl1py.SDL_WasInit(*args)
 SDL_WasInit = _sdl1py.SDL_WasInit
 
-def SDL_Quit():
+def SDL_Quit() -> "void" :
   return _sdl1py.SDL_Quit()
 SDL_Quit = _sdl1py.SDL_Quit
 
-def SDL_SetError(*args):
+def SDL_SetError(*args) -> "void" :
   return _sdl1py.SDL_SetError(*args)
 SDL_SetError = _sdl1py.SDL_SetError
 
-def SDL_GetError():
+def SDL_GetError() -> "char const *" :
   return _sdl1py.SDL_GetError()
 SDL_GetError = _sdl1py.SDL_GetError
 
-def SDL_ClearError():
+def SDL_ClearError() -> "void" :
   return _sdl1py.SDL_ClearError()
 SDL_ClearError = _sdl1py.SDL_ClearError
 class SDL_version(_object):
@@ -132,101 +132,101 @@ SDL_version_swigregister = _sdl1py.SDL_version_swigregister
 SDL_version_swigregister(SDL_version)
 
 
-def SDL_VERSION(*args):
+def SDL_VERSION(*args) -> "void" :
   return _sdl1py.SDL_VERSION(*args)
 SDL_VERSION = _sdl1py.SDL_VERSION
 
-def SDL_VERSIONNUM(*args):
+def SDL_VERSIONNUM(*args) -> "int" :
   return _sdl1py.SDL_VERSIONNUM(*args)
 SDL_VERSIONNUM = _sdl1py.SDL_VERSIONNUM
 
-def SDL_COMPILEDVERSION():
+def SDL_COMPILEDVERSION() -> "int" :
   return _sdl1py.SDL_COMPILEDVERSION()
 SDL_COMPILEDVERSION = _sdl1py.SDL_COMPILEDVERSION
 
-def SDL_VERSION_ATLEAST(*args):
+def SDL_VERSION_ATLEAST(*args) -> "int" :
   return _sdl1py.SDL_VERSION_ATLEAST(*args)
 SDL_VERSION_ATLEAST = _sdl1py.SDL_VERSION_ATLEAST
 
-def SDL_Linked_Version():
+def SDL_Linked_Version() -> "SDL_version *" :
   return _sdl1py.SDL_Linked_Version()
 SDL_Linked_Version = _sdl1py.SDL_Linked_Version
 SDL_APPMOUSEFOCUS = _sdl1py.SDL_APPMOUSEFOCUS
 SDL_APPINPUTFOCUS = _sdl1py.SDL_APPINPUTFOCUS
 SDL_APPACTIVE = _sdl1py.SDL_APPACTIVE
 
-def SDL_GetAppState():
+def SDL_GetAppState() -> "int" :
   return _sdl1py.SDL_GetAppState()
 SDL_GetAppState = _sdl1py.SDL_GetAppState
 SDL_LIL_ENDIAN = _sdl1py.SDL_LIL_ENDIAN
 SDL_BIG_ENDIAN = _sdl1py.SDL_BIG_ENDIAN
 SDL_BYTEORDER = _sdl1py.SDL_BYTEORDER
 
-def SDL_Swap16(*args):
+def SDL_Swap16(*args) -> "int" :
   return _sdl1py.SDL_Swap16(*args)
 SDL_Swap16 = _sdl1py.SDL_Swap16
 
-def SDL_Swap32(*args):
+def SDL_Swap32(*args) -> "int" :
   return _sdl1py.SDL_Swap32(*args)
 SDL_Swap32 = _sdl1py.SDL_Swap32
 
-def SDL_Swap64(*args):
+def SDL_Swap64(*args) -> "int" :
   return _sdl1py.SDL_Swap64(*args)
 SDL_Swap64 = _sdl1py.SDL_Swap64
 
-def SDL_SwapLE16(*args):
+def SDL_SwapLE16(*args) -> "int" :
   return _sdl1py.SDL_SwapLE16(*args)
 SDL_SwapLE16 = _sdl1py.SDL_SwapLE16
 
-def SDL_SwapLE32(*args):
+def SDL_SwapLE32(*args) -> "int" :
   return _sdl1py.SDL_SwapLE32(*args)
 SDL_SwapLE32 = _sdl1py.SDL_SwapLE32
 
-def SDL_SwapLE64(*args):
+def SDL_SwapLE64(*args) -> "int" :
   return _sdl1py.SDL_SwapLE64(*args)
 SDL_SwapLE64 = _sdl1py.SDL_SwapLE64
 
-def SDL_SwapBE16(*args):
+def SDL_SwapBE16(*args) -> "int" :
   return _sdl1py.SDL_SwapBE16(*args)
 SDL_SwapBE16 = _sdl1py.SDL_SwapBE16
 
-def SDL_SwapBE32(*args):
+def SDL_SwapBE32(*args) -> "int" :
   return _sdl1py.SDL_SwapBE32(*args)
 SDL_SwapBE32 = _sdl1py.SDL_SwapBE32
 
-def SDL_SwapBE64(*args):
+def SDL_SwapBE64(*args) -> "int" :
   return _sdl1py.SDL_SwapBE64(*args)
 SDL_SwapBE64 = _sdl1py.SDL_SwapBE64
 
-def SDL_HasRDTSC():
+def SDL_HasRDTSC() -> "int" :
   return _sdl1py.SDL_HasRDTSC()
 SDL_HasRDTSC = _sdl1py.SDL_HasRDTSC
 
-def SDL_HasMMX():
+def SDL_HasMMX() -> "int" :
   return _sdl1py.SDL_HasMMX()
 SDL_HasMMX = _sdl1py.SDL_HasMMX
 
-def SDL_HasMMXExt():
+def SDL_HasMMXExt() -> "int" :
   return _sdl1py.SDL_HasMMXExt()
 SDL_HasMMXExt = _sdl1py.SDL_HasMMXExt
 
-def SDL_Has3DNow():
+def SDL_Has3DNow() -> "int" :
   return _sdl1py.SDL_Has3DNow()
 SDL_Has3DNow = _sdl1py.SDL_Has3DNow
 
-def SDL_Has3DNowExt():
+def SDL_Has3DNowExt() -> "int" :
   return _sdl1py.SDL_Has3DNowExt()
 SDL_Has3DNowExt = _sdl1py.SDL_Has3DNowExt
 
-def SDL_HasSSE():
+def SDL_HasSSE() -> "int" :
   return _sdl1py.SDL_HasSSE()
 SDL_HasSSE = _sdl1py.SDL_HasSSE
 
-def SDL_HasSSE2():
+def SDL_HasSSE2() -> "int" :
   return _sdl1py.SDL_HasSSE2()
 SDL_HasSSE2 = _sdl1py.SDL_HasSSE2
 
-def SDL_HasAltiVec():
+def SDL_HasAltiVec() -> "int" :
   return _sdl1py.SDL_HasAltiVec()
 SDL_HasAltiVec = _sdl1py.SDL_HasAltiVec
 SDL_RELEASED = _sdl1py.SDL_RELEASED
@@ -259,7 +259,7 @@ SDL_USEREVENT = _sdl1py.SDL_USEREVENT
 SDL_NUMEVENTS = _sdl1py.SDL_NUMEVENTS
 SDL_ALLEVENTS = _sdl1py.SDL_ALLEVENTS
 
-def SDL_EVENTMASK(*args):
+def SDL_EVENTMASK(*args) -> "int" :
   return _sdl1py.SDL_EVENTMASK(*args)
 SDL_EVENTMASK = _sdl1py.SDL_EVENTMASK
 class SDL_ActiveEvent(_object):
@@ -638,26 +638,26 @@ SDL_Event_swigregister = _sdl1py.SDL_Event_swigregister
 SDL_Event_swigregister(SDL_Event)
 
 
-def SDL_PumpEvents():
+def SDL_PumpEvents() -> "void" :
   return _sdl1py.SDL_PumpEvents()
 SDL_PumpEvents = _sdl1py.SDL_PumpEvents
 SDL_ADDEVENT = _sdl1py.SDL_ADDEVENT
 SDL_PEEKEVENT = _sdl1py.SDL_PEEKEVENT
 SDL_GETEVENT = _sdl1py.SDL_GETEVENT
 
-def SDL_PeepEvents(*args):
+def SDL_PeepEvents(*args) -> "int" :
   return _sdl1py.SDL_PeepEvents(*args)
 SDL_PeepEvents = _sdl1py.SDL_PeepEvents
 
-def SDL_PollEvent(*args):
+def SDL_PollEvent(*args) -> "int" :
   return _sdl1py.SDL_PollEvent(*args)
 SDL_PollEvent = _sdl1py.SDL_PollEvent
 
-def SDL_WaitEvent(*args):
+def SDL_WaitEvent(*args) -> "int" :
   return _sdl1py.SDL_WaitEvent(*args)
 SDL_WaitEvent = _sdl1py.SDL_WaitEvent
 
-def SDL_PushEvent(*args):
+def SDL_PushEvent(*args) -> "int" :
   return _sdl1py.SDL_PushEvent(*args)
 SDL_PushEvent = _sdl1py.SDL_PushEvent
 SDL_QUERY = _sdl1py.SDL_QUERY
@@ -665,11 +665,11 @@ SDL_IGNORE = _sdl1py.SDL_IGNORE
 SDL_DISABLE = _sdl1py.SDL_DISABLE
 SDL_ENABLE = _sdl1py.SDL_ENABLE
 
-def SDL_EventState(*args):
+def SDL_EventState(*args) -> "Uint8" :
   return _sdl1py.SDL_EventState(*args)
 SDL_EventState = _sdl1py.SDL_EventState
 
-def SDL_QuitRequested():
+def SDL_QuitRequested() -> "int" :
   return _sdl1py.SDL_QuitRequested()
 SDL_QuitRequested = _sdl1py.SDL_QuitRequested
 SDLK_UNKNOWN = _sdl1py.SDLK_UNKNOWN
@@ -952,33 +952,33 @@ SDL_keysym_swigregister(SDL_keysym)
 
 SDL_ALL_HOTKEYS = _sdl1py.SDL_ALL_HOTKEYS
 
-def SDL_EnableUNICODE(*args):
+def SDL_EnableUNICODE(*args) -> "int" :
   return _sdl1py.SDL_EnableUNICODE(*args)
 SDL_EnableUNICODE = _sdl1py.SDL_EnableUNICODE
 SDL_DEFAULT_REPEAT_DELAY = _sdl1py.SDL_DEFAULT_REPEAT_DELAY
 SDL_DEFAULT_REPEAT_INTERVAL = _sdl1py.SDL_DEFAULT_REPEAT_INTERVAL
 
-def SDL_EnableKeyRepeat(*args):
+def SDL_EnableKeyRepeat(*args) -> "int" :
   return _sdl1py.SDL_EnableKeyRepeat(*args)
 SDL_EnableKeyRepeat = _sdl1py.SDL_EnableKeyRepeat
 
-def SDL_GetKeyRepeat(*args):
+def SDL_GetKeyRepeat(*args) -> "void" :
   return _sdl1py.SDL_GetKeyRepeat(*args)
 SDL_GetKeyRepeat = _sdl1py.SDL_GetKeyRepeat
 
-def SDL_GetKeyState(*args):
+def SDL_GetKeyState(*args) -> "Uint8 *" :
   return _sdl1py.SDL_GetKeyState(*args)
 SDL_GetKeyState = _sdl1py.SDL_GetKeyState
 
-def SDL_GetModState():
+def SDL_GetModState() -> "SDLMod" :
   return _sdl1py.SDL_GetModState()
 SDL_GetModState = _sdl1py.SDL_GetModState
 
-def SDL_SetModState(*args):
+def SDL_SetModState(*args) -> "void" :
   return _sdl1py.SDL_SetModState(*args)
 SDL_SetModState = _sdl1py.SDL_SetModState
 
-def SDL_GetKeyName(*args):
+def SDL_GetKeyName(*args) -> "char *" :
   return _sdl1py.SDL_GetKeyName(*args)
 SDL_GetKeyName = _sdl1py.SDL_GetKeyName
 class SDL_Cursor(_object):
@@ -1018,35 +1018,35 @@ SDL_Cursor_swigregister = _sdl1py.SDL_Cursor_swigregister
 SDL_Cursor_swigregister(SDL_Cursor)
 
 
-def SDL_GetMouseState():
+def SDL_GetMouseState() -> "int *, int *" :
   return _sdl1py.SDL_GetMouseState()
 SDL_GetMouseState = _sdl1py.SDL_GetMouseState
 
-def SDL_GetRelativeMouseState():
+def SDL_GetRelativeMouseState() -> "int *, int *" :
   return _sdl1py.SDL_GetRelativeMouseState()
 SDL_GetRelativeMouseState = _sdl1py.SDL_GetRelativeMouseState
 
-def SDL_WarpMouse(*args):
+def SDL_WarpMouse(*args) -> "void" :
   return _sdl1py.SDL_WarpMouse(*args)
 SDL_WarpMouse = _sdl1py.SDL_WarpMouse
 
-def SDL_CreateCursor(*args):
+def SDL_CreateCursor(*args) -> "SDL_Cursor *" :
   return _sdl1py.SDL_CreateCursor(*args)
 SDL_CreateCursor = _sdl1py.SDL_CreateCursor
 
-def SDL_SetCursor(*args):
+def SDL_SetCursor(*args) -> "void" :
   return _sdl1py.SDL_SetCursor(*args)
 SDL_SetCursor = _sdl1py.SDL_SetCursor
 
-def SDL_GetCursor():
+def SDL_GetCursor() -> "SDL_Cursor *" :
   return _sdl1py.SDL_GetCursor()
 SDL_GetCursor = _sdl1py.SDL_GetCursor
 
-def SDL_FreeCursor(*args):
+def SDL_FreeCursor(*args) -> "void" :
   return _sdl1py.SDL_FreeCursor(*args)
 SDL_FreeCursor = _sdl1py.SDL_FreeCursor
 
-def SDL_ShowCursor(*args):
+def SDL_ShowCursor(*args) -> "int" :
   return _sdl1py.SDL_ShowCursor(*args)
 SDL_ShowCursor = _sdl1py.SDL_ShowCursor
 SDL_BUTTON_LEFT = _sdl1py.SDL_BUTTON_LEFT
@@ -1057,7 +1057,7 @@ SDL_BUTTON_WHEELDOWN = _sdl1py.SDL_BUTTON_WHEELDOWN
 SDL_BUTTON_X1 = _sdl1py.SDL_BUTTON_X1
 SDL_BUTTON_X2 = _sdl1py.SDL_BUTTON_X2
 
-def SDL_BUTTON(*args):
+def SDL_BUTTON(*args) -> "int" :
   return _sdl1py.SDL_BUTTON(*args)
 SDL_BUTTON = _sdl1py.SDL_BUTTON
 SDL_BUTTON_LMASK = _sdl1py.SDL_BUTTON_LMASK
@@ -1066,55 +1066,55 @@ SDL_BUTTON_RMASK = _sdl1py.SDL_BUTTON_RMASK
 SDL_BUTTON_X1MASK = _sdl1py.SDL_BUTTON_X1MASK
 SDL_BUTTON_X2MASK = _sdl1py.SDL_BUTTON_X2MASK
 
-def SDL_JoystickGetBall(*args):
+def SDL_JoystickGetBall(*args) -> "int *, int *" :
   return _sdl1py.SDL_JoystickGetBall(*args)
 SDL_JoystickGetBall = _sdl1py.SDL_JoystickGetBall
 
-def SDL_NumJoysticks():
+def SDL_NumJoysticks() -> "int" :
   return _sdl1py.SDL_NumJoysticks()
 SDL_NumJoysticks = _sdl1py.SDL_NumJoysticks
 
-def SDL_JoystickName(*args):
+def SDL_JoystickName(*args) -> "char const *" :
   return _sdl1py.SDL_JoystickName(*args)
 SDL_JoystickName = _sdl1py.SDL_JoystickName
 
-def SDL_JoystickOpen(*args):
+def SDL_JoystickOpen(*args) -> "SDL_Joystick *" :
   return _sdl1py.SDL_JoystickOpen(*args)
 SDL_JoystickOpen = _sdl1py.SDL_JoystickOpen
 
-def SDL_JoystickOpened(*args):
+def SDL_JoystickOpened(*args) -> "int" :
   return _sdl1py.SDL_JoystickOpened(*args)
 SDL_JoystickOpened = _sdl1py.SDL_JoystickOpened
 
-def SDL_JoystickIndex(*args):
+def SDL_JoystickIndex(*args) -> "int" :
   return _sdl1py.SDL_JoystickIndex(*args)
 SDL_JoystickIndex = _sdl1py.SDL_JoystickIndex
 
-def SDL_JoystickNumAxes(*args):
+def SDL_JoystickNumAxes(*args) -> "int" :
   return _sdl1py.SDL_JoystickNumAxes(*args)
 SDL_JoystickNumAxes = _sdl1py.SDL_JoystickNumAxes
 
-def SDL_JoystickNumBalls(*args):
+def SDL_JoystickNumBalls(*args) -> "int" :
   return _sdl1py.SDL_JoystickNumBalls(*args)
 SDL_JoystickNumBalls = _sdl1py.SDL_JoystickNumBalls
 
-def SDL_JoystickNumHats(*args):
+def SDL_JoystickNumHats(*args) -> "int" :
   return _sdl1py.SDL_JoystickNumHats(*args)
 SDL_JoystickNumHats = _sdl1py.SDL_JoystickNumHats
 
-def SDL_JoystickNumButtons(*args):
+def SDL_JoystickNumButtons(*args) -> "int" :
   return _sdl1py.SDL_JoystickNumButtons(*args)
 SDL_JoystickNumButtons = _sdl1py.SDL_JoystickNumButtons
 
-def SDL_JoystickUpdate():
+def SDL_JoystickUpdate() -> "void" :
   return _sdl1py.SDL_JoystickUpdate()
 SDL_JoystickUpdate = _sdl1py.SDL_JoystickUpdate
 
-def SDL_JoystickEventState(*args):
+def SDL_JoystickEventState(*args) -> "int" :
   return _sdl1py.SDL_JoystickEventState(*args)
 SDL_JoystickEventState = _sdl1py.SDL_JoystickEventState
 
-def SDL_JoystickGetAxis(*args):
+def SDL_JoystickGetAxis(*args) -> "Sint16" :
   return _sdl1py.SDL_JoystickGetAxis(*args)
 SDL_JoystickGetAxis = _sdl1py.SDL_JoystickGetAxis
 SDL_HAT_CENTERED = _sdl1py.SDL_HAT_CENTERED
@@ -1127,19 +1127,19 @@ SDL_HAT_RIGHTDOWN = _sdl1py.SDL_HAT_RIGHTDOWN
 SDL_HAT_LEFTUP = _sdl1py.SDL_HAT_LEFTUP
 SDL_HAT_LEFTDOWN = _sdl1py.SDL_HAT_LEFTDOWN
 
-def SDL_JoystickGetHat(*args):
+def SDL_JoystickGetHat(*args) -> "Uint8" :
   return _sdl1py.SDL_JoystickGetHat(*args)
 SDL_JoystickGetHat = _sdl1py.SDL_JoystickGetHat
 
-def SDL_JoystickGetButton(*args):
+def SDL_JoystickGetButton(*args) -> "Uint8" :
   return _sdl1py.SDL_JoystickGetButton(*args)
 SDL_JoystickGetButton = _sdl1py.SDL_JoystickGetButton
 
-def SDL_JoystickClose(*args):
+def SDL_JoystickClose(*args) -> "void" :
   return _sdl1py.SDL_JoystickClose(*args)
 SDL_JoystickClose = _sdl1py.SDL_JoystickClose
 
-def SDL_GetPlatformName():
+def SDL_GetPlatformName() -> "char const *" :
   return _sdl1py.SDL_GetPlatformName()
 SDL_GetPlatformName = _sdl1py.SDL_GetPlatformName
 SDL_ALPHA_OPAQUE = _sdl1py.SDL_ALPHA_OPAQUE
@@ -1492,223 +1492,223 @@ SDL_GL_SWAP_CONTROL = _sdl1py.SDL_GL_SWAP_CONTROL
 SDL_LOGPAL = _sdl1py.SDL_LOGPAL
 SDL_PHYSPAL = _sdl1py.SDL_PHYSPAL
 
-def SDL_VideoInit(*args):
+def SDL_VideoInit(*args) -> "int" :
   return _sdl1py.SDL_VideoInit(*args)
 SDL_VideoInit = _sdl1py.SDL_VideoInit
 
-def SDL_VideoQuit():
+def SDL_VideoQuit() -> "void" :
   return _sdl1py.SDL_VideoQuit()
 SDL_VideoQuit = _sdl1py.SDL_VideoQuit
 
-def SDL_VideoDriverName(*args):
+def SDL_VideoDriverName(*args) -> "char *" :
   return _sdl1py.SDL_VideoDriverName(*args)
 SDL_VideoDriverName = _sdl1py.SDL_VideoDriverName
 
-def SDL_GetVideoSurface():
+def SDL_GetVideoSurface() -> "SDL_Surface *" :
   return _sdl1py.SDL_GetVideoSurface()
 SDL_GetVideoSurface = _sdl1py.SDL_GetVideoSurface
 
-def SDL_GetVideoInfo():
+def SDL_GetVideoInfo() -> "SDL_VideoInfo const *" :
   return _sdl1py.SDL_GetVideoInfo()
 SDL_GetVideoInfo = _sdl1py.SDL_GetVideoInfo
 
-def SDL_VideoModeOK(*args):
+def SDL_VideoModeOK(*args) -> "int" :
   return _sdl1py.SDL_VideoModeOK(*args)
 SDL_VideoModeOK = _sdl1py.SDL_VideoModeOK
 
-def SDL_ListModes(*args):
+def SDL_ListModes(*args) -> "SDL_Rect **" :
   return _sdl1py.SDL_ListModes(*args)
 SDL_ListModes = _sdl1py.SDL_ListModes
 
-def SDL_SetVideoMode(*args):
+def SDL_SetVideoMode(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_SetVideoMode(*args)
 SDL_SetVideoMode = _sdl1py.SDL_SetVideoMode
 
-def SDL_UpdateRects(*args):
+def SDL_UpdateRects(*args) -> "void" :
   return _sdl1py.SDL_UpdateRects(*args)
 SDL_UpdateRects = _sdl1py.SDL_UpdateRects
 
-def SDL_UpdateRect(*args):
+def SDL_UpdateRect(*args) -> "void" :
   return _sdl1py.SDL_UpdateRect(*args)
 SDL_UpdateRect = _sdl1py.SDL_UpdateRect
 
-def SDL_Flip(*args):
+def SDL_Flip(*args) -> "int" :
   return _sdl1py.SDL_Flip(*args)
 SDL_Flip = _sdl1py.SDL_Flip
 
-def SDL_SetGamma(*args):
+def SDL_SetGamma(*args) -> "int" :
   return _sdl1py.SDL_SetGamma(*args)
 SDL_SetGamma = _sdl1py.SDL_SetGamma
 
-def SDL_SetGammaRamp(*args):
+def SDL_SetGammaRamp(*args) -> "int" :
   return _sdl1py.SDL_SetGammaRamp(*args)
 SDL_SetGammaRamp = _sdl1py.SDL_SetGammaRamp
 
-def SDL_GetGammaRamp(*args):
+def SDL_GetGammaRamp(*args) -> "int" :
   return _sdl1py.SDL_GetGammaRamp(*args)
 SDL_GetGammaRamp = _sdl1py.SDL_GetGammaRamp
 
-def SDL_SetColors(*args):
+def SDL_SetColors(*args) -> "int" :
   return _sdl1py.SDL_SetColors(*args)
 SDL_SetColors = _sdl1py.SDL_SetColors
 
-def SDL_SetPalette(*args):
+def SDL_SetPalette(*args) -> "int" :
   return _sdl1py.SDL_SetPalette(*args)
 SDL_SetPalette = _sdl1py.SDL_SetPalette
 
-def SDL_MapRGB(*args):
+def SDL_MapRGB(*args) -> "Uint32" :
   return _sdl1py.SDL_MapRGB(*args)
 SDL_MapRGB = _sdl1py.SDL_MapRGB
 
-def SDL_MapRGBA(*args):
+def SDL_MapRGBA(*args) -> "Uint32" :
   return _sdl1py.SDL_MapRGBA(*args)
 SDL_MapRGBA = _sdl1py.SDL_MapRGBA
 
-def SDL_GetRGB(*args):
+def SDL_GetRGB(*args) -> "void" :
   return _sdl1py.SDL_GetRGB(*args)
 SDL_GetRGB = _sdl1py.SDL_GetRGB
 
-def SDL_GetRGBA(*args):
+def SDL_GetRGBA(*args) -> "void" :
   return _sdl1py.SDL_GetRGBA(*args)
 SDL_GetRGBA = _sdl1py.SDL_GetRGBA
 
-def SDL_CreateRGBSurface(*args):
+def SDL_CreateRGBSurface(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_CreateRGBSurface(*args)
 SDL_CreateRGBSurface = _sdl1py.SDL_CreateRGBSurface
 
-def SDL_CreateRGBSurfaceFrom(*args):
+def SDL_CreateRGBSurfaceFrom(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_CreateRGBSurfaceFrom(*args)
 SDL_CreateRGBSurfaceFrom = _sdl1py.SDL_CreateRGBSurfaceFrom
 
-def SDL_FreeSurface(*args):
+def SDL_FreeSurface(*args) -> "void" :
   return _sdl1py.SDL_FreeSurface(*args)
 SDL_FreeSurface = _sdl1py.SDL_FreeSurface
 
-def SDL_LockSurface(*args):
+def SDL_LockSurface(*args) -> "int" :
   return _sdl1py.SDL_LockSurface(*args)
 SDL_LockSurface = _sdl1py.SDL_LockSurface
 
-def SDL_UnlockSurface(*args):
+def SDL_UnlockSurface(*args) -> "void" :
   return _sdl1py.SDL_UnlockSurface(*args)
 SDL_UnlockSurface = _sdl1py.SDL_UnlockSurface
 
-def SDL_LoadBMP_RW(*args):
+def SDL_LoadBMP_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_LoadBMP_RW(*args)
 SDL_LoadBMP_RW = _sdl1py.SDL_LoadBMP_RW
 
-def SDL_SaveBMP_RW(*args):
+def SDL_SaveBMP_RW(*args) -> "int" :
   return _sdl1py.SDL_SaveBMP_RW(*args)
 SDL_SaveBMP_RW = _sdl1py.SDL_SaveBMP_RW
 
-def SDL_SetColorKey(*args):
+def SDL_SetColorKey(*args) -> "int" :
   return _sdl1py.SDL_SetColorKey(*args)
 SDL_SetColorKey = _sdl1py.SDL_SetColorKey
 
-def SDL_SetAlpha(*args):
+def SDL_SetAlpha(*args) -> "int" :
   return _sdl1py.SDL_SetAlpha(*args)
 SDL_SetAlpha = _sdl1py.SDL_SetAlpha
 
-def SDL_SetClipRect(*args):
+def SDL_SetClipRect(*args) -> "SDL_bool" :
   return _sdl1py.SDL_SetClipRect(*args)
 SDL_SetClipRect = _sdl1py.SDL_SetClipRect
 
-def SDL_GetClipRect(*args):
+def SDL_GetClipRect(*args) -> "void" :
   return _sdl1py.SDL_GetClipRect(*args)
 SDL_GetClipRect = _sdl1py.SDL_GetClipRect
 
-def SDL_ConvertSurface(*args):
+def SDL_ConvertSurface(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_ConvertSurface(*args)
 SDL_ConvertSurface = _sdl1py.SDL_ConvertSurface
 
-def SDL_UpperBlit(*args):
+def SDL_UpperBlit(*args) -> "int" :
   return _sdl1py.SDL_UpperBlit(*args)
 SDL_UpperBlit = _sdl1py.SDL_UpperBlit
 
-def SDL_LowerBlit(*args):
+def SDL_LowerBlit(*args) -> "int" :
   return _sdl1py.SDL_LowerBlit(*args)
 SDL_LowerBlit = _sdl1py.SDL_LowerBlit
 
-def SDL_FillRect(*args):
+def SDL_FillRect(*args) -> "int" :
   return _sdl1py.SDL_FillRect(*args)
 SDL_FillRect = _sdl1py.SDL_FillRect
 
-def SDL_DisplayFormat(*args):
+def SDL_DisplayFormat(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_DisplayFormat(*args)
 SDL_DisplayFormat = _sdl1py.SDL_DisplayFormat
 
-def SDL_DisplayFormatAlpha(*args):
+def SDL_DisplayFormatAlpha(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_DisplayFormatAlpha(*args)
 SDL_DisplayFormatAlpha = _sdl1py.SDL_DisplayFormatAlpha
 
-def SDL_CreateYUVOverlay(*args):
+def SDL_CreateYUVOverlay(*args) -> "SDL_Overlay *" :
   return _sdl1py.SDL_CreateYUVOverlay(*args)
 SDL_CreateYUVOverlay = _sdl1py.SDL_CreateYUVOverlay
 
-def SDL_LockYUVOverlay(*args):
+def SDL_LockYUVOverlay(*args) -> "int" :
   return _sdl1py.SDL_LockYUVOverlay(*args)
 SDL_LockYUVOverlay = _sdl1py.SDL_LockYUVOverlay
 
-def SDL_UnlockYUVOverlay(*args):
+def SDL_UnlockYUVOverlay(*args) -> "void" :
   return _sdl1py.SDL_UnlockYUVOverlay(*args)
 SDL_UnlockYUVOverlay = _sdl1py.SDL_UnlockYUVOverlay
 
-def SDL_DisplayYUVOverlay(*args):
+def SDL_DisplayYUVOverlay(*args) -> "int" :
   return _sdl1py.SDL_DisplayYUVOverlay(*args)
 SDL_DisplayYUVOverlay = _sdl1py.SDL_DisplayYUVOverlay
 
-def SDL_FreeYUVOverlay(*args):
+def SDL_FreeYUVOverlay(*args) -> "void" :
   return _sdl1py.SDL_FreeYUVOverlay(*args)
 SDL_FreeYUVOverlay = _sdl1py.SDL_FreeYUVOverlay
 
-def SDL_GL_LoadLibrary(*args):
+def SDL_GL_LoadLibrary(*args) -> "int" :
   return _sdl1py.SDL_GL_LoadLibrary(*args)
 SDL_GL_LoadLibrary = _sdl1py.SDL_GL_LoadLibrary
 
-def SDL_GL_GetProcAddress(*args):
+def SDL_GL_GetProcAddress(*args) -> "void *" :
   return _sdl1py.SDL_GL_GetProcAddress(*args)
 SDL_GL_GetProcAddress = _sdl1py.SDL_GL_GetProcAddress
 
-def SDL_GL_SetAttribute(*args):
+def SDL_GL_SetAttribute(*args) -> "int" :
   return _sdl1py.SDL_GL_SetAttribute(*args)
 SDL_GL_SetAttribute = _sdl1py.SDL_GL_SetAttribute
 
-def SDL_GL_GetAttribute(*args):
+def SDL_GL_GetAttribute(*args) -> "int" :
   return _sdl1py.SDL_GL_GetAttribute(*args)
 SDL_GL_GetAttribute = _sdl1py.SDL_GL_GetAttribute
 
-def SDL_GL_SwapBuffers():
+def SDL_GL_SwapBuffers() -> "void" :
   return _sdl1py.SDL_GL_SwapBuffers()
 SDL_GL_SwapBuffers = _sdl1py.SDL_GL_SwapBuffers
 
-def SDL_GL_UpdateRects(*args):
+def SDL_GL_UpdateRects(*args) -> "void" :
   return _sdl1py.SDL_GL_UpdateRects(*args)
 SDL_GL_UpdateRects = _sdl1py.SDL_GL_UpdateRects
 
-def SDL_GL_Lock():
+def SDL_GL_Lock() -> "void" :
   return _sdl1py.SDL_GL_Lock()
 SDL_GL_Lock = _sdl1py.SDL_GL_Lock
 
-def SDL_GL_Unlock():
+def SDL_GL_Unlock() -> "void" :
   return _sdl1py.SDL_GL_Unlock()
 SDL_GL_Unlock = _sdl1py.SDL_GL_Unlock
 
-def SDL_WM_SetCaption(*args):
+def SDL_WM_SetCaption(*args) -> "void" :
   return _sdl1py.SDL_WM_SetCaption(*args)
 SDL_WM_SetCaption = _sdl1py.SDL_WM_SetCaption
 
-def SDL_WM_GetCaption(*args):
+def SDL_WM_GetCaption(*args) -> "void" :
   return _sdl1py.SDL_WM_GetCaption(*args)
 SDL_WM_GetCaption = _sdl1py.SDL_WM_GetCaption
 
-def SDL_WM_SetIcon(*args):
+def SDL_WM_SetIcon(*args) -> "void" :
   return _sdl1py.SDL_WM_SetIcon(*args)
 SDL_WM_SetIcon = _sdl1py.SDL_WM_SetIcon
 
-def SDL_WM_IconifyWindow():
+def SDL_WM_IconifyWindow() -> "int" :
   return _sdl1py.SDL_WM_IconifyWindow()
 SDL_WM_IconifyWindow = _sdl1py.SDL_WM_IconifyWindow
 
-def SDL_WM_ToggleFullScreen(*args):
+def SDL_WM_ToggleFullScreen(*args) -> "int" :
   return _sdl1py.SDL_WM_ToggleFullScreen(*args)
 SDL_WM_ToggleFullScreen = _sdl1py.SDL_WM_ToggleFullScreen
 SDL_GRAB_QUERY = _sdl1py.SDL_GRAB_QUERY
@@ -1716,199 +1716,199 @@ SDL_GRAB_OFF = _sdl1py.SDL_GRAB_OFF
 SDL_GRAB_ON = _sdl1py.SDL_GRAB_ON
 SDL_GRAB_FULLSCREEN = _sdl1py.SDL_GRAB_FULLSCREEN
 
-def SDL_WM_GrabInput(*args):
+def SDL_WM_GrabInput(*args) -> "SDL_GrabMode" :
   return _sdl1py.SDL_WM_GrabInput(*args)
 SDL_WM_GrabInput = _sdl1py.SDL_WM_GrabInput
 
-def SDL_SoftStretch(*args):
+def SDL_SoftStretch(*args) -> "int" :
   return _sdl1py.SDL_SoftStretch(*args)
 SDL_SoftStretch = _sdl1py.SDL_SoftStretch
 
-def SDL_MUSTLOCK(*args):
+def SDL_MUSTLOCK(*args) -> "int" :
   return _sdl1py.SDL_MUSTLOCK(*args)
 SDL_MUSTLOCK = _sdl1py.SDL_MUSTLOCK
 
-def SDL_LoadBMP(*args):
+def SDL_LoadBMP(*args) -> "SDL_Surface *" :
   return _sdl1py.SDL_LoadBMP(*args)
 SDL_LoadBMP = _sdl1py.SDL_LoadBMP
 
-def SDL_BlitSurface(*args):
+def SDL_BlitSurface(*args) -> "int" :
   return _sdl1py.SDL_BlitSurface(*args)
 SDL_BlitSurface = _sdl1py.SDL_BlitSurface
 SDL_TIMESLICE = _sdl1py.SDL_TIMESLICE
 TIMER_RESOLUTION = _sdl1py.TIMER_RESOLUTION
 
-def SDL_GetTicks():
+def SDL_GetTicks() -> "Uint32" :
   return _sdl1py.SDL_GetTicks()
 SDL_GetTicks = _sdl1py.SDL_GetTicks
 
-def SDL_Delay(*args):
+def SDL_Delay(*args) -> "void" :
   return _sdl1py.SDL_Delay(*args)
 SDL_Delay = _sdl1py.SDL_Delay
 
-def SDL_SetTimer(*args):
+def SDL_SetTimer(*args) -> "int" :
   return _sdl1py.SDL_SetTimer(*args)
 SDL_SetTimer = _sdl1py.SDL_SetTimer
 
-def SDL_AddTimer(*args):
+def SDL_AddTimer(*args) -> "SDL_TimerID" :
   return _sdl1py.SDL_AddTimer(*args)
 SDL_AddTimer = _sdl1py.SDL_AddTimer
 
-def SDL_RemoveTimer(*args):
+def SDL_RemoveTimer(*args) -> "SDL_bool" :
   return _sdl1py.SDL_RemoveTimer(*args)
 SDL_RemoveTimer = _sdl1py.SDL_RemoveTimer
 SDL_IMAGE_MAJOR_VERSION = _sdl1py.SDL_IMAGE_MAJOR_VERSION
 SDL_IMAGE_MINOR_VERSION = _sdl1py.SDL_IMAGE_MINOR_VERSION
 SDL_IMAGE_PATCHLEVEL = _sdl1py.SDL_IMAGE_PATCHLEVEL
 
-def IMG_Linked_Version():
+def IMG_Linked_Version() -> "SDL_version const *" :
   return _sdl1py.IMG_Linked_Version()
 IMG_Linked_Version = _sdl1py.IMG_Linked_Version
 IMG_INIT_JPG = _sdl1py.IMG_INIT_JPG
 IMG_INIT_PNG = _sdl1py.IMG_INIT_PNG
 IMG_INIT_TIF = _sdl1py.IMG_INIT_TIF
 
-def IMG_Init(*args):
+def IMG_Init(*args) -> "int" :
   return _sdl1py.IMG_Init(*args)
 IMG_Init = _sdl1py.IMG_Init
 
-def IMG_Quit():
+def IMG_Quit() -> "void" :
   return _sdl1py.IMG_Quit()
 IMG_Quit = _sdl1py.IMG_Quit
 
-def IMG_LoadTyped_RW(*args):
+def IMG_LoadTyped_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadTyped_RW(*args)
 IMG_LoadTyped_RW = _sdl1py.IMG_LoadTyped_RW
 
-def IMG_Load(*args):
+def IMG_Load(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_Load(*args)
 IMG_Load = _sdl1py.IMG_Load
 
-def IMG_Load_RW(*args):
+def IMG_Load_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_Load_RW(*args)
 IMG_Load_RW = _sdl1py.IMG_Load_RW
 
-def IMG_InvertAlpha(*args):
+def IMG_InvertAlpha(*args) -> "int" :
   return _sdl1py.IMG_InvertAlpha(*args)
 IMG_InvertAlpha = _sdl1py.IMG_InvertAlpha
 
-def IMG_isICO(*args):
+def IMG_isICO(*args) -> "int" :
   return _sdl1py.IMG_isICO(*args)
 IMG_isICO = _sdl1py.IMG_isICO
 
-def IMG_isCUR(*args):
+def IMG_isCUR(*args) -> "int" :
   return _sdl1py.IMG_isCUR(*args)
 IMG_isCUR = _sdl1py.IMG_isCUR
 
-def IMG_isBMP(*args):
+def IMG_isBMP(*args) -> "int" :
   return _sdl1py.IMG_isBMP(*args)
 IMG_isBMP = _sdl1py.IMG_isBMP
 
-def IMG_isGIF(*args):
+def IMG_isGIF(*args) -> "int" :
   return _sdl1py.IMG_isGIF(*args)
 IMG_isGIF = _sdl1py.IMG_isGIF
 
-def IMG_isJPG(*args):
+def IMG_isJPG(*args) -> "int" :
   return _sdl1py.IMG_isJPG(*args)
 IMG_isJPG = _sdl1py.IMG_isJPG
 
-def IMG_isLBM(*args):
+def IMG_isLBM(*args) -> "int" :
   return _sdl1py.IMG_isLBM(*args)
 IMG_isLBM = _sdl1py.IMG_isLBM
 
-def IMG_isPCX(*args):
+def IMG_isPCX(*args) -> "int" :
   return _sdl1py.IMG_isPCX(*args)
 IMG_isPCX = _sdl1py.IMG_isPCX
 
-def IMG_isPNG(*args):
+def IMG_isPNG(*args) -> "int" :
   return _sdl1py.IMG_isPNG(*args)
 IMG_isPNG = _sdl1py.IMG_isPNG
 
-def IMG_isPNM(*args):
+def IMG_isPNM(*args) -> "int" :
   return _sdl1py.IMG_isPNM(*args)
 IMG_isPNM = _sdl1py.IMG_isPNM
 
-def IMG_isTIF(*args):
+def IMG_isTIF(*args) -> "int" :
   return _sdl1py.IMG_isTIF(*args)
 IMG_isTIF = _sdl1py.IMG_isTIF
 
-def IMG_isXCF(*args):
+def IMG_isXCF(*args) -> "int" :
   return _sdl1py.IMG_isXCF(*args)
 IMG_isXCF = _sdl1py.IMG_isXCF
 
-def IMG_isXPM(*args):
+def IMG_isXPM(*args) -> "int" :
   return _sdl1py.IMG_isXPM(*args)
 IMG_isXPM = _sdl1py.IMG_isXPM
 
-def IMG_isXV(*args):
+def IMG_isXV(*args) -> "int" :
   return _sdl1py.IMG_isXV(*args)
 IMG_isXV = _sdl1py.IMG_isXV
 
-def IMG_LoadICO_RW(*args):
+def IMG_LoadICO_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadICO_RW(*args)
 IMG_LoadICO_RW = _sdl1py.IMG_LoadICO_RW
 
-def IMG_LoadCUR_RW(*args):
+def IMG_LoadCUR_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadCUR_RW(*args)
 IMG_LoadCUR_RW = _sdl1py.IMG_LoadCUR_RW
 
-def IMG_LoadBMP_RW(*args):
+def IMG_LoadBMP_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadBMP_RW(*args)
 IMG_LoadBMP_RW = _sdl1py.IMG_LoadBMP_RW
 
-def IMG_LoadGIF_RW(*args):
+def IMG_LoadGIF_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadGIF_RW(*args)
 IMG_LoadGIF_RW = _sdl1py.IMG_LoadGIF_RW
 
-def IMG_LoadJPG_RW(*args):
+def IMG_LoadJPG_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadJPG_RW(*args)
 IMG_LoadJPG_RW = _sdl1py.IMG_LoadJPG_RW
 
-def IMG_LoadLBM_RW(*args):
+def IMG_LoadLBM_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadLBM_RW(*args)
 IMG_LoadLBM_RW = _sdl1py.IMG_LoadLBM_RW
 
-def IMG_LoadPCX_RW(*args):
+def IMG_LoadPCX_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadPCX_RW(*args)
 IMG_LoadPCX_RW = _sdl1py.IMG_LoadPCX_RW
 
-def IMG_LoadPNG_RW(*args):
+def IMG_LoadPNG_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadPNG_RW(*args)
 IMG_LoadPNG_RW = _sdl1py.IMG_LoadPNG_RW
 
-def IMG_LoadPNM_RW(*args):
+def IMG_LoadPNM_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadPNM_RW(*args)
 IMG_LoadPNM_RW = _sdl1py.IMG_LoadPNM_RW
 
-def IMG_LoadTGA_RW(*args):
+def IMG_LoadTGA_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadTGA_RW(*args)
 IMG_LoadTGA_RW = _sdl1py.IMG_LoadTGA_RW
 
-def IMG_LoadTIF_RW(*args):
+def IMG_LoadTIF_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadTIF_RW(*args)
 IMG_LoadTIF_RW = _sdl1py.IMG_LoadTIF_RW
 
-def IMG_LoadXCF_RW(*args):
+def IMG_LoadXCF_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadXCF_RW(*args)
 IMG_LoadXCF_RW = _sdl1py.IMG_LoadXCF_RW
 
-def IMG_LoadXPM_RW(*args):
+def IMG_LoadXPM_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadXPM_RW(*args)
 IMG_LoadXPM_RW = _sdl1py.IMG_LoadXPM_RW
 
-def IMG_LoadXV_RW(*args):
+def IMG_LoadXV_RW(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_LoadXV_RW(*args)
 IMG_LoadXV_RW = _sdl1py.IMG_LoadXV_RW
 
-def IMG_ReadXPMFromArray(*args):
+def IMG_ReadXPMFromArray(*args) -> "SDL_Surface *" :
   return _sdl1py.IMG_ReadXPMFromArray(*args)
 IMG_ReadXPMFromArray = _sdl1py.IMG_ReadXPMFromArray
 
-def SDL_GetPixel(*args):
+def SDL_GetPixel(*args) -> "Uint32" :
   return _sdl1py.SDL_GetPixel(*args)
 SDL_GetPixel = _sdl1py.SDL_GetPixel
 
-def SDL_PutPixel(*args):
+def SDL_PutPixel(*args) -> "void" :
   return _sdl1py.SDL_PutPixel(*args)
 SDL_PutPixel = _sdl1py.SDL_PutPixel
 

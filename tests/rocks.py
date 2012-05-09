@@ -80,11 +80,11 @@ def main():
         sdl1py.SDL_GetPixel(img, 0, 0))
 
     stars = [(random.randint(0, screen.w-1), random.randint(0, screen.h-1)) \
-        for x in xrange(100)]
+        for x in range(100)]
 
     rocks = [Rock(random.randint(0, screen.w - img.w - 1), \
         random.randint(0, screen.h - img.h - 1), img.w, img.h) \
-        for x in xrange(50)]
+        for x in range(50)]
 
     while run:
         while sdl1py.SDL_PollEvent(ev):
@@ -116,7 +116,7 @@ def main():
 
         # Update screen
         assert 0 == sdl1py.SDL_Flip(screen)
-        sdl1py.SDL_Delay(1000 / 50);
+        sdl1py.SDL_Delay(1000 // 50);
 
     assert 0 == sdl1py.SDL_FreeSurface(img)
     sdl1py.SDL_Quit()
@@ -125,5 +125,5 @@ if __name__ == '__main__':
     try:
         main()
     except AssertionError:
-        print sdl1py.SDL_GetError()
+        print(sdl1py.SDL_GetError())
 
